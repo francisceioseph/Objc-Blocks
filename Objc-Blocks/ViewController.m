@@ -16,12 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startSquareAnimation:(UIButton *)sender {
+    
+    [UIView animateWithDuration:3.0 animations:^{
+        
+        [self moveSquareWithCompletion:^{
+            _labelBlockOne.textColor = [UIColor colorWithRed: 234/255.0 green:217/255.0 blue:76/255.0 alpha:1.0];
+        }];
+        
+    } completion:^(BOOL finished) {
+        
+        _labelBlockTwo.textColor = [UIColor colorWithRed: 234/255.0 green:217/255.0 blue:76/255.0 alpha:1.0];
+    }];
+}
+
+- (void) moveSquareWithCompletion: (void (^)(void)) completion {
+    
+    self.purpleSquare.center = CGPointMake(200.0, 200.0);
+    completion();
+}
 @end

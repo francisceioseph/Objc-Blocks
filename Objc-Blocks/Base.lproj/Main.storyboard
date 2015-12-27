@@ -30,6 +30,9 @@
                                 <state key="normal" title="Animate Square">
                                     <color key="titleColor" red="0.26666666666666666" green="0.066666666666666666" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="startSquareAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQC-cF-OyZ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="chI-kO-2be">
                                 <rect key="frame" x="229" y="508" width="142" height="51"/>
@@ -65,6 +68,11 @@
                             <constraint firstItem="chI-kO-2be" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDm-oB-XuM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelBlockOne" destination="YEd-3Z-2pM" id="w9E-ot-Svs"/>
+                        <outlet property="labelBlockTwo" destination="4TV-7e-TCe" id="HqJ-Uv-gm9"/>
+                        <outlet property="purpleSquare" destination="ad2-VS-SSZ" id="f29-Ps-aMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
